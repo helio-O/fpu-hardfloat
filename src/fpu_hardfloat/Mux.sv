@@ -1,18 +1,18 @@
 module Mux3to1 # (parameter DATA_WIDTH = 32) (
-    input [DATA_WIDTH:0] input1,
-    input [DATA_WIDTH:0] input2,
-    input [DATA_WIDTH:0] input3,
+    input [DATA_WIDTH-1:0] input1,
+    input [DATA_WIDTH-1:0] input2,
+    input [DATA_WIDTH-1:0] input3,
     input [1:0] control_signal,
-    output reg [DATA_WIDTH:0] out
+    output reg [DATA_WIDTH-1:0] out
 );
 
-// L贸gica del mux
+// L骻ica del mux
 always_comb begin
     case (control_signal)
-        2'b00: out = input1; // Control signal indica selecci贸n de input1
-        2'b01: out = input2; // Control signal indica selecci贸n de input2
-        2'b10: out = input3; // Control signal indica selecci贸n de input3
-        default: out = '0; // Valor por defecto si la se帽al de control no es v谩lida
+        2'b00: out = input1; 
+        2'b01: out = input2; 
+        2'b10: out = input3; 
+        default: out = '0;
     endcase
 end
 
