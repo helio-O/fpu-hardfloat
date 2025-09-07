@@ -54,5 +54,5 @@ Este repositorio contiene tanto código propio como bibliotecas externas.
 
 ## ✒️ Autor
 
-Trabajo Fin de Grado de **Helio Otero**  
+Trabajo Fin de Grado de **Helio O**  
 Universidad Complutense de Madrid — 2025
