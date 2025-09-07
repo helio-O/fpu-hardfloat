@@ -48,8 +48,7 @@ Este repositorio contiene tanto código propio como bibliotecas externas.
 - **Código propio que integra HardFloat** → MIT  
 - **Código propio que integra VFloat** → GPLv3 (copyleft fuerte)  
 - **HardFloat** → [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)  
-- **VFloat** → [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)  
-- **FPnew** → [Solderpad Hardware License 0.51](https://solderpad.org/licenses/SHL-0.51/)  
+- **VFloat** → [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) 
 
 ---
 
