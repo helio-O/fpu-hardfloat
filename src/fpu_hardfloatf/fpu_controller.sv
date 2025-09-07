@@ -31,15 +31,15 @@ module FPU_Controller #(parameter MAN_WIDTH = 23, parameter EXP_WIDTH = 8  )(
    
 );
 
-// Definici髇 de par醡etros para los estados
+// Definici贸n de par谩metros para los estados
 
 
-// Definici髇 de registros de estado
+// Definici贸n de registros de estado
 logic [2:0] next_state;
 logic [2:0] current_state;
 logic [1:0] demux_control;
 
-// Asignaci髇 del estado inicial
+// Asignaci贸n del estado inicial
 always_ff @(posedge clk or negedge rst) begin
     if(~rst) begin
         current_state <= INIT;
@@ -53,7 +53,7 @@ always_ff @(posedge clk or negedge rst) begin
     end
 end
 
-// L骻ica de la m醧uina de estados
+// L贸gica de la m谩quina de estados
 always_comb begin
     case (current_state)
         INIT: begin
@@ -73,11 +73,11 @@ always_comb begin
                         demux_control_o = 2'b00;
                         subOp = (operator == 3'b001) ? 1'b1 : 1'b0; // Si es resta, subOp es 1
                     end
-                    3'b010: begin // multiplicaci髇
+                    3'b010: begin // multiplicaci贸n
                         next_state = MUL;
                         demux_control_o = 2'b01;
                     end
-                    3'b011, 3'b100: begin // divisi髇 o ra韟 cuadrada
+                    3'b011, 3'b100: begin // divisi贸n o ra铆z cuadrada
                     demux_control_o = 2'b10;
                         if (div_in_ready == 1) begin
                             next_state = DIV;
@@ -108,8 +108,8 @@ always_comb begin
             end   
         end
         DONE: begin
-            fpu_ready = 1'b1; // Listo para recibir otra instrucci髇
-            res_valid = 1'b0; // Resetear res_valid para la pr髕ima operaci髇
+            fpu_ready = 1'b1; // Listo para recibir otra instrucci贸n
+            res_valid = 1'b0; // Resetear res_valid para la pr贸xima operaci贸n
             next_state = INIT;
         end
         default: begin
