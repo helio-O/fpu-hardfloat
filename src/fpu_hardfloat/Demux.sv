@@ -36,7 +36,7 @@ always_comb begin
             DIV1 = op1;
             DIV2 = op2;
         end
-        default: begin // Control signal no v·lida
+        default: begin // Control signal no v√°lida
             ADD1 = 0;
             ADD2 = 0; 
             MUL1 = 0;
