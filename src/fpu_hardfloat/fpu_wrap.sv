@@ -1,6 +1,6 @@
 module FPU_Wrapper #(
-    parameter MAN_WIDTH = 24,   // TamaÒo de la mantisa
-    parameter EXP_WIDTH = 8     // TamaÒo del exponente
+    parameter MAN_WIDTH = 24,   // Tama√±o de la mantisa
+    parameter EXP_WIDTH = 8     // Tama√±o del exponente
 )(
     input [3:0] tag,            // Entrada: Etiqueta
     input [MAN_WIDTH + EXP_WIDTH - 1:0] inOp1,  // Entrada: Operando 1
@@ -10,7 +10,7 @@ module FPU_Wrapper #(
     input cpu_ready,            // CPU lista
     input [2:0] rounding_mode,  // Modo de redondeo
     input reset,                // Reset
-    input in_valid,             // Datos de entrada v·lidos
+    input in_valid,             // Datos de entrada v√°lidos
     
     output [3:0] tag_out,       
     output result_valid,       
