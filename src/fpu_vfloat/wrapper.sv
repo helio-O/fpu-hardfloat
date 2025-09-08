@@ -1,8 +1,3 @@
-// FPU_VFloat_Wrapper.sv
-// Instancia el controller y los M�DULOS VHDL de VFloat directamente (sin adapters).
-// IMPORTANTE: Compila este wrapper con el mismo ancho IEEE que las entidades VHDL enlazadas.
-//   - Ej: si usas las variantes FP32 de VFloat ? IEEE_W=32 (EXP_WIDTH=8, MAN_WIDTH=23)
-//   - Si el DIV es FP64 en tus fuentes, genera un wrapper FP64 para DIV (o separa wrappers por formato).
 
 module FPU_VFloat_Wrapper #(
   parameter int EXP_WIDTH = 5,
