@@ -8,7 +8,7 @@ El proyecto se centra en la implementación, integración y evaluación de disti
 ## 📖 Descripción
 
 El objetivo principal es comparar arquitecturas de punto flotante de código abierto (**HardFloat**, **FPnew** y **VFloat**) en cuanto a área, latencia y frecuencia máxima.  
-Se ha desarrollado un *wrapper* propio en SystemVerilog que integra estas librerías y gestiona las operaciones mediante una FSM personalizada.
+Se ha desarrollado dos *wrapper* propios en SystemVerilog que integran módulos de las librerías HardFloat y VFloat y gestiona las operaciones mediante una FSM personalizada.
 
 El repositorio incluye:
 - Módulos en SystemVerilog.
@@ -34,9 +34,9 @@ El repositorio incluye:
 ## ▶️ Uso
 
 1. Abrir **Vivado 2020.2**.  
-2. Importar los ficheros de `src/` y `third_party/`.  
-3. Ejecutar los scripts en `scripts/` para obtener los reportes de área, frecuencia y potencia.  
-4. Los resultados se generan en `results/`.  
+2. Importar los ficheros de `src/` y `third_party/`.
+3. Sintetizar e implementar tras hacer los cambios pertinentes en los módulos de las bibliotecas y/o generando los IP Cores correspondientes.
+4. Ejecutar los scripts en `scripts/` para obtener los reportes de área, frecuencia y potencia.    
 
 ---
 
